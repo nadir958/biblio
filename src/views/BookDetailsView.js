@@ -23,33 +23,22 @@ const BookDetailsView = ({data})=>{
 };
 
   return (
-    
-  /**   <div>
-      <Link to={`/edit/book/${Book.id}`} className="text-right m-3 btn btn-dark border-dark">Edit</Link>
-      <div className="p-2 border border-dark rounded">
-      <h3>{Book.title}</h3>
-          <p> {Book.summary} </p>
-          <hr className="bg-primary" />
+  
+   <div>
+    <Link to={`/edit/book/${Book.id}`} className="text-right m-3 btn btn-dark border-dark">Edit</Link>
+    <Card style={divStyle}>
+      <Card.Body>
+        <Card.Title >{Book.title}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{Book.publisher+" - "+Book.publicationDate}</Card.Subtitle>
+        <Card.Text>
+          <p>{Book.summary}</p>
+        </Card.Text>
+        <hr/>
           <p className="m-0">{Book.language}</p>
           <p>{Book.author}</p>
-      </div>
-    </div>
-    */
-   <div>
-   <Link to={`/edit/book/${Book.id}`} className="text-right m-3 btn btn-dark border-dark">Edit</Link>
-   <Card style={divStyle}>
-   <Card.Body>
-     <Card.Title >{Book.title}</Card.Title>
-     <Card.Subtitle className="mb-2 text-muted">{Book.publisher+" - "+Book.publicationDate}</Card.Subtitle>
-     <Card.Text>
-       <p>{Book.summary}</p>
-     </Card.Text>
-     <hr/>
-        <p className="m-0">{Book.language}</p>
-        <p>{Book.author}</p>
-   </Card.Body>
- </Card>
- </div>
+      </Card.Body>
+    </Card>
+  </div>
   )
 };
 
