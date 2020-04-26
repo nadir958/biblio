@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container, Row,Col } from 'react-bootstrap';
+import {Container, Row,Col,Button } from 'react-bootstrap';
 import Book from './Book';
 import BookSearch from './BookSearch';
 
@@ -19,7 +19,7 @@ const BookView = ({books,onSearch}) => {
             </Row>
             <Row>
                 {
-                    books.map((book) => <Col key={book.isbn}><Book book={book}/></Col>)
+                    books.map((book,key) => <Col key={book.id}><Book book={book}/></Col>)
                 }
             </Row>
         </Container>

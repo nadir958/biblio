@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card} from  'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Book = ({book}) => {
     return(
@@ -11,6 +12,7 @@ const Book = ({book}) => {
               {book.summary}
             </p>
           </blockquote>
+        <Link to={`/Book/${book.id}`} className="btn btn-dark d-block m-1">Details</Link>
         </Card.Body>
         </Card>
     )

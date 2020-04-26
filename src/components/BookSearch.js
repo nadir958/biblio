@@ -16,7 +16,7 @@ const BookSearch = ({onSearch})=> {
        
         <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="Book title" aria-label="Book title" aria-describedby="basic-addon2" style={divStyle} value={searchValue} onChange={changeTitle}/>
-            <div class="input-group-append">
+            <div className="input-group-append">
                 <button className="btn btn-outline-secondary" type="button" id="button-addon2" style={divStyle} onClick={searchBook}>Search</button>
             </div>
         </div>

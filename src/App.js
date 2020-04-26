@@ -1,28 +1,18 @@
 import React, { useEffect,useState } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row,Col } from 'react-bootstrap';
+import { Container, Row,Col,Button } from 'react-bootstrap';
 import './App.css';
 import Header from './components/Header';
+import BookForm from './components/BookForm';
 import BookView from './components/BookView';
 import axios from "axios";
-import { bookService } from './serviceq/BookService';
+import { bookService } from './services/BookService';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter as Router,Switch,Route,Link
 } from "react-router-dom";
 import BookDetailsView from './views/BookDetailsView';
 
-const BOOKS =[
-  {id: 'EE1', title: 'Java',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuereerat a ante.'},
-  {id: 'EE2', title: 'React',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuereerat a ante.'},
-  {id: 'EE3', title: 'PHP',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuereerat a ante.'}
-  ,{id: 'EE4', title: 'Laravel',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuereerat a ante.'}
-  ,{id: 'EE5', title: 'Symfony',description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuereerat a ante.'}
-
-]
 
 function App(){
   const [books, setBooks] = useState([]);
@@ -63,10 +53,22 @@ function App(){
       <Row>
         <Col>
         <Container>
-<Router>
+        <Router>
           <Switch>
-            <Route path="/books/:id">
-              <p>ididididid</p>
+          <Route path="/edit/book/:id">
+            <Container>
+              <BookForm mode="edit" />
+            </Container>
+          </Route>
+          <Route path="/add/book">
+            <Container>
+              <BookForm mode="create" />
+            </Container>
+          </Route>
+          <Route path="/Book/:id">
+            <Container>
+              <BookDetailsView />
+            </Container>
             </Route>
             <Route path="/">
               <BookView books={books} onSearch={(bookName)=>setSearchValue(bookName)}/>
