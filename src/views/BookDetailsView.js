@@ -20,7 +20,7 @@ const BookDetailsView = ({data})=>{
 
   const divStyle = {
     marginTop: '20px'
-};
+  };
 
   return (
   

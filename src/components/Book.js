@@ -3,8 +3,12 @@ import {Card} from  'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Book = ({book}) => {
+  const divStyle = {
+    marginTop: '20px',
+    width: '18rem'
+  };
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={divStyle}>
         <Card.Header>{book.title}</Card.Header>
         <Card.Body>
           <blockquote className="blockquote mb-0">

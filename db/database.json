@@ -83,9 +83,19 @@
       "numberOfPages": "300",
       "publicationDate": "Tue Oct 27 2001 16:53:02 GMT+0000 (UTC)",
       "publisher": "Amazon",
-      "summary": null,
-      "title": "Symfony 5: The Fast Track",
+      "summary": "Symfony 5: The Fast Track is the best resource to learn how to develop modern web applications with Symfony 5. The book was published in paper a few weeks ago and, by popular demand, it's now available for purchase as a PDF file too.",
+      "title": "Symfony ",
       "id": 8
+    },
+    {
+      "author": "Nadir",
+      "language": "FR",
+      "numberOfPages": "98",
+      "publicationDate": "Tue Oct 17 2008 16:53:02 GMT+0000 (UTC)",
+      "publisher": "Amazon",
+      "summary": "sunanananananananannann",
+      "title": "HTML",
+      "id": 9
     }
   ]
 }
